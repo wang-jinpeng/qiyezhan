@@ -1,0 +1,374 @@
+@import "base.css";
+header{
+    position: relative;
+    overflow: hidden;
+    height: 700px;
+    z-index: 999;
+    width: 100%;
+}
+header .banner{
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+header .banner .slides{
+    display: block;
+    width: 100%;
+    height: 700px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+header .banner .slides li{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    z-index: 900;
+    /*display: none;*/
+    opacity: 0;
+    transition: all 1s;
+}
+header .banner .slides li.active{
+    /*display: block;*/
+    opacity: 1;
+}
+header .banner .dian{
+    display: block;
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    top: 662px;
+    z-index: 9900;
+    padding: 5px 15px 5px 0;
+    margin: 0;
+    margin-left: -38px;
+}
+header .banner .dian li{
+    display: block;
+    list-style: none;
+    width: 15px;
+    height: 12px;
+    float: left;
+    margin-left: 3px;
+    cursor: pointer;
+    background: #ebebeb;
+}
+header .banner .dian li.active{
+    background: #4d4d4d;
+}
+.top{
+    position: absolute;
+    z-index: 9999;
+    width: 90%;
+    top: 50px;
+    left: 5%;
+    right: 5%;
+}
+.top h1{
+    float: left;
+    font-size: 12px;
+}
+.top h1 img{
+    border: 0;
+    vertical-align: top;
+}
+.top ul{
+    float: right;
+}
+.top ul li{
+    float: left;
+    width: 110px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.top ul li a{
+    color: #fff;
+}
+.middle{
+    width: 100%;
+    position: relative;
+}
+.middle .left-color{
+    width: 50%;
+    background: #e20040;
+    padding: 130px 0;
+}
+.middle .content{
+    width: 94%;
+    position: absolute;
+    z-index: 999;
+    top: 50px;
+    left: 3%;
+    right: 3%;
+}
+.middle .content .conten-left{
+    float: left;
+    margin-left: 10%;
+    display: inline;
+    font-size: 12px;
+}
+.middle .content .conten-right{
+    float: right;
+    width: 46%;
+    text-align: center;
+}
+.middle .content .conten-right h3{
+    font-size: 25px;
+    line-height: 36px;
+    color: #e20040;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.middle .content .conten-right span{
+    line-height: 28px;
+    font-size: 14px;
+    color: #888;
+}
+.zhanshi{
+    width: 100%;
+    background: #f6f6f6;
+    padding: 35px 0;
+    height: auto;
+    overflow: hidden;
+}
+.zhanshi .case .title{
+    text-align: center;
+    width: 100%;
+    padding-bottom: 35px;
+}
+.zhanshi .case .title h3{
+    font-size: 28px;
+    color: #e20040;
+}
+.zhanshi .case .title span{
+    font-size: 16px;
+    color: #888;
+    line-height: 28px;
+}
+.zhanshi .case .title p{
+    line-height: 28px;
+    font-size: 14px;
+}
+.zhanshi .case .box{
+    width: 98%;
+    height:630px;
+    padding: 0 3%;
+}
+.zhanshi .case .box ul{
+    list-style: none;
+    position: relative;
+    margin: 0 0 25px 0;
+    padding: 0;
+    margin-left: 15px;
+    height:auto;
+}
+.zhanshi .case .box ul li{
+    float: left;
+    margin-bottom: 35px;
+    display: inline;
+    margin-right: 15px;
+    width: 23%;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+.zhanshi .case .box ul li a{
+    display: block;
+    color: #fff;
+    width:100%;
+    height:100%;
+}
+.zhanshi .case .box ul li a img{
+    display: block;
+    position: relative;
+    width: 100%;
+    height:100%;
+}
+.zhanshi .case .box ul li a .hot_info{
+    position: absolute;
+    background: url(../img/case-bg.png);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    left: -100%;
+    top: 0;
+}
+.zhanshi .case .box ul li a .hot_info h2{
+    font-size: 20px;
+    margin-top: 26%;
+    font-weight: normal;
+    text-align: center;
+}
+.zhanshi .case .box ul li a .hot_info span{
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+}
+.zhanshi .case .box ul li a .hot_info p{
+    background: url(../img/case-more.png) no-repeat;
+    width: 41px;
+    height: 41px;
+    margin-left: 45%;
+    margin-top: 5%;
+}
+.zhanshi .case .more{
+    height:21px;
+    text-align: center;
+    font-size: 16px;
+    padding-top: 0;
+}
+.zhanshi .case .more a{
+    text-decoration: none;
+    background: url(../img/case-jt.png) no-repeat right center;
+    padding-right: 15px;
+    color: #555;
+}
+.bottom{
+    padding: 55px 0;
+    height: auto;
+    overflow: hidden;
+}
+.bottom .title{
+    text-align: center;
+    width: 100%;
+    padding-bottom: 35px;
+}
+.bottom .title h3{
+    font-size: 28px;
+    color: #e20040;
+}
+.bottom .title span{
+    font-size: 16px;
+    color: #888;
+    line-height: 28px;
+}
+.bottom .title p{
+    line-height: 28px;
+    font-size: 14px;
+}
+.bottom ul{
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 12%;
+    padding-top: 25px;
+}
+.bottom ul li{
+    float: left;
+    width: 160px;
+    text-align: center;
+    margin-right: 5%;
+}
+.bottom ul li h3{
+    font-size: 16px;
+    color: #888;
+    padding-top: 5px;
+    font-weight: normal;
+}
+.bottom ul li p{
+    font-size: 12px;
+    color: #888;
+}
+.bottom ul li span a{
+    margin-left: 50px;
+    width: 52px;
+    height: 43px;
+    text-align: center;
+    display: block;
+}
+.bottom ul li span a.ds{
+    background: url(../img/computer-01.png) no-repeat center top;
+}
+.bottom ul li span a.sj{
+    background: url(../img/iphone-1.png) no-repeat center top;
+}
+.bottom ul li span a.rj{
+    background: url(../img/index-icon1.png) no-repeat center top;
+}
+.bottom ul li span a.pinpai{
+    background: url(../img/index-icon3.png) no-repeat center top;
+}
+.bottom ul li span a.wb{
+    background: url(../img/index-icon5.png) no-repeat center top;
+}
+.bottom ul li span a.ds:hover{
+    background: url(../img/computer-02.png) no-repeat center top;
+}
+.bottom ul li span a.sj:hover{
+    background: url(../img/iphone-2.png) no-repeat center top;
+}
+.bottom ul li span a.rj:hover{
+    background: url(../img/index-icon2.png) no-repeat center top;
+}
+.bottom ul li span a.pinpai:hover{
+    background: url(../img/index-icon4.png) no-repeat center top;
+}
+.bottom ul li span a.wb:hover{
+    background: url(../img/index-icon6.png) no-repeat center top;
+}
+footer{
+    width: 100%;
+    background: #080808;
+    padding: 30px 0;
+    height: auto;
+    overflow: hidden;
+}
+footer .footer-1200{
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+footer .footer-1200 .footer-jt{
+    background: url(../img/bottom-jt.png) no-repeat center top;
+    width: 57px;
+    height: 29px;
+    display: block;
+    margin-left: 260px;
+    text-align: center;
+}
+footer .footer-1200 .footer-link{
+    margin: 35px 0 50px 220px;
+    padding-bottom: 15px;
+}
+footer .footer-1200 .footer-link ul{
+    width: auto;
+    height: 21px;
+    margin-left: 12px;
+}
+footer .footer-1200 .footer-link ul li{
+    float: left;
+    margin-right: 20px;
+    display: inline;
+    text-align: center;
+}
+footer .footer-1200 .footer-link ul li a.wb{
+    background: url(../img/sina-icon1.png) no-repeat;
+    width: 25px;
+    height: 21px;
+    display: block;
+}
+footer .footer-1200 .footer-link ul li a.wx{
+    background: url(../img/weixin-icon1.png) no-repeat;
+    width: 26px;
+    height: 21px;
+    display: block;
+}
+footer .footer-1200 .footer-link ul li a.qq{
+    background: url(../img/qq-icon1.png) no-repeat;
+    width: 25px;
+    height: 21px;
+    display: block;
+}
+footer .footer-1200 .footer-link ul li a.wb:hover{
+    background: url(../img/sina-icon2.png) no-repeat;
+}
+footer .footer-1200 .footer-link ul li a.wx:hover{
+    background: url(../img/weixin-icon2.png) no-repeat;
+}
+footer .footer-1200 .footer-link ul li a.qq:hover{
+    background: url(../img/qq-icon2.png) no-repeat;
+}
