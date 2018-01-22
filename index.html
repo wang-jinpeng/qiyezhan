@@ -134,41 +134,63 @@
 <script src="js/index.js"></script>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script>
-    let lastx=0,lasty=0;
-    var n=0;
-    $(".item").data("isShow",false);
-    $(".item").data("dir","");
+    var n=0,lastX=0,lastY=0;
     $(".item").mousemove(function (e) {
+
         n++;
-        let newx=e.offsetX,newy=e.offsetY;
-        if (dir==="x"){
+        var newX=e.offsetX,newY=e.offsetY;
+        var dir=Math.abs(newX-lastX)>Math.abs(newY-lastY)?"hon":"ver";
 
-
-        }
-        if (n===2){
-            if (!$(".item").data("isShow")){
-                $(".item").data("isShow",true);
-                var dir=Math.abs(newx-lastx)>Math.abs(newy-lasty)?"x":"y";
-                if (dir==="x"){
-                    if(newx>lastx){
-                        $(this).find(".hot_info").css({left:-200,top:0}).animate({left:0,top:0})
-                    }else {
-                        $(this).find(".hot_info").css({left:200,top:0}).animate({left:0,top:0})
-                    }
-                }else {
-                    if (newy>lasty){
-                        $(this).find(".hot_info").css({left:0,top:-200}).animate({left:0,top:0})
-                    }else {
-                        $(this).find(".hot_info").css({left:0,top:200}).animate({left:0,top:0})
-                    }
-                }
+        if(dir==="hon"){
+            if(newX>lastX) {
+                $(this).data("dir","right");
+            }else{
+                $(this).data("dir","left");
+            }
+        } else{
+            if(newY>lastY){
+                $(this).data("dir","bottom");
+            }else{
+                $(this).data("dir","top");
             }
         }
-        lastx=newx;
-        lasty=newy
+        if(n===2){
+            if(!$(this).data("isShow")){
+                $(this).data("isShow",true);
+                var hot_info=$(this).find(".hot_info");
+                if(dir==="hon"){
+                    if(newX>lastX){
+                        hot_info.css({left:-342,top:0})
+                    }else{
+                        hot_info.css({left:342,top:0})
+                    }
+                }else {
+                    if(newY>lastY){
+                        hot_info.css({left:0,top:-280})
+                    }else{
+                        hot_info.css({left:0,top:280})
+                    }
+                }
+                hot_info.animate({left:0,top:0},500);
+            }}
+        lastX=newX;
+        lastY=newY;
     });
     $(".item").mouseleave(function () {
+        $(this).find(".hot_info").finish();
         n=0;
+        $(this).data("isShow",false);
+        var dir=$(this).data("dir");
+        var hot_info=$(this).find(".hot_info").css({left:0,top:0});
+        if(dir==="left"){
+            hot_info.animate({left:-342,top:0},500)
+        }else if(dir==="right"){
+            hot_info.animate({left:342,top:0},500)
+        }else if(dir==="top") {
+            hot_info.animate({left: 0, top:-280}, 500)
+        }else if(dir==="bottom") {
+            hot_info.animate({left: 0, top:280}, 500)
+        }
     })
 </script>
 </html>
